@@ -42,8 +42,11 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: fixed;
+   top: 0;
    padding: 0 3%;
-   background-color: var(--header-background)
+   background-color: var(--header-background);
+   z-index: 4;
 }
 
 .logo {
@@ -71,7 +74,7 @@ body {
    justify-content: space-between;
    width: 30px;
    height: 25px;
-   z-index: 2;
+   z-index: 10;
    /* margin: 0 50px 0 0; */
 }
 
@@ -185,7 +188,7 @@ body {
    flex-direction: column;
    width: var(--width);
    max-width: var(--max-width);
-   margin: 40px auto;
+   margin: 120px auto;
    padding: 0 20px;
 }
 
@@ -486,6 +489,7 @@ body {
 
 
 .form__container label input, label textarea {
+   width: 100%;
    max-width: 100%;
    display: flex;
    flex-direction: column;

@@ -36,3 +36,6 @@ for (const item of items) { item.addEventListener('click', removeClass) }
 // items.map((item) => {
 //    item.addEventListener('click', removeClass)
 // })
+
+
+

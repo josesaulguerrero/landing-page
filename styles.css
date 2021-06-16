@@ -432,6 +432,7 @@ body {
    color: white;
    font-size: 1.6rem;
    transition: all .2s;
+   cursor: pointer;
 }
 
 .sign-up button:active, .upgrade-to-plus button:active, .upgrade-to-platinum button:active {
@@ -456,10 +457,14 @@ body {
 
 .contact-us {
    width: var(--width);
-   max-width: var(--max-width);
-   margin: 0 auto;
+   /* max-width: var(--max-width); */
+   margin: 20px auto 0;
    padding: 20px;
-   margin: 20px 0;
+   background-image: url('assets/karsten-winegeart-oU6KZTXhuvk-unsplash.jpg');
+   background-position: left center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* margin: 20px 0; */
 }
 
 .contact-us h2 {
@@ -468,19 +473,106 @@ body {
 
 .form__container {
    width: 100%;
+   max-width: 500px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: flex-start;
+   margin: 30px auto;
+   padding: 20px;
+   background-color: rgba(72, 145, 235, 0.644);
+   border-radius: 20px;
 }
 
 
-.message {
+.form__container label input, label textarea {
+   max-width: 100%;
    display: flex;
    flex-direction: column;
+   outline: none;
+   border: none;
+   border-radius: 15px;
+   padding: 15px 15px;
+   font-size: 1.7rem;
+   font-family: var(--font-family);
+   resize: none;
+   /* padding: 10px; */
+   /* margin: 15px 0; */
 }
 
+.form__container label {
+   width: 100%;
+   margin: 10px 0;
+}
+
+.name--input, .email--input {
+   width: 100%;
+   height: 40px;
+}
+
+textarea {
+   /* height: 150px; */
+}
+
+input[type="submit"] {
+   align-self: center;
+   width: 200px;
+   height: 40px;
+   margin: 20px 0 0;
+   border: none;
+   border-radius: 25px;
+   background-color: rgb(112, 14, 204);
+   color: white;
+   font-size: 1.8rem;
+   transition: all .2s;
+   cursor: pointer;
+}
+
+input[type="submit"]:active {
+   transform: scale(.9);
+}
+
+
 /* form styles end here */
+
+
+/* footer styles start here */
+
+.footer {
+   width: 100%;
+   height: 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+   background-color: var(--header-background);
+}
+
+.design p {
+   font-size: 1.9rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.social-media {
+   width: 200px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.social-media img {
+   width: 30px;
+   cursor: pointer;
+   transition: all .2s;
+}
+
+.social-media img:hover {
+   transform: translateY(10px);
+}
+
+
+/* footer styles end here */
 
 
 @media(min-width: 600px) {
@@ -489,6 +581,9 @@ body {
    }
    .feature img {
       width: 100px;
+   }
+   .footer {
+      flex-direction: row;
    }
 }
 

@@ -232,8 +232,8 @@ body {
 .what-we-do {
    width: 100%;
    /* max-width: var(--max-width); */
-   height: auto;
-   max-height: 100vh;
+   height: 100%;
+   /* max-height: 100vh; */
    background-image: url('assets/alvan-nee-T-0EW-SEbsE-unsplash.jpg');
    background-position: center;
    background-repeat: no-repeat;
@@ -259,7 +259,7 @@ body {
    display: flex;
    width: var(--width);
    max-width: var(--max-width);
-   min-height: 100%;
+   /* min-height: 100%; */
    flex-direction: column;
    margin: 0 auto;
    /* padding: 30px 0 ; */
@@ -450,6 +450,37 @@ body {
    background-color: rgb(148, 15, 148);
 }
 /* cards styles end here */
+
+
+/* form styles start here */
+
+.contact-us {
+   width: var(--width);
+   max-width: var(--max-width);
+   margin: 0 auto;
+   padding: 20px;
+   margin: 20px 0;
+}
+
+.contact-us h2 {
+   text-align: center;
+}
+
+.form__container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+
+.message {
+   display: flex;
+   flex-direction: column;
+}
+
+/* form styles end here */
 
 
 @media(min-width: 600px) {

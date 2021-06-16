@@ -1,3 +1,228 @@
-body {
-   /* background-color: green; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+:root {
+   --font-family: 'Montserrat', sans-serif;
+   --second-font-family: 'Caveat', cursive;
+   --width: 100%;
+   --font-color: rgb(37, 37, 37);
+   --header-background: #26c0a9;
+}
+
+body {
+   width: 100%;
+   max-width: 100%;
+   height: 100vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   font-size: 1.8rem;
+   font-family: var(--font-family);   
+   color: var(--font-color);
+   /* scroll-behavior: smooth; */
+}
+
+/* header starts here */
+
+.header {
+   width: var(--width);
+   height: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+   background-color: var(--header-background)
+}
+
+.logo {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* margin: 0 20px; */
+   font-size: 4.5rem;
+   font-weight: bold;
+   color: white;
+   font-family: var(--second-font-family);
+}
+
+.logo img {
+   width: 90px;
+   height: 90px;
+}
+
+
+.burger-icon {
+   display: flex;
+   flex-direction: column;
+   align-items: space-between;
+   justify-content: space-between;
+   width: 30px;
+   height: 25px;
+   z-index: 2;
+   /* margin: 0 50px 0 0; */
+}
+
+.stuck {
+   position: fixed;
+   /* top: 5px; */
+}
+
+.line1, .line2, .line3 {
+   width: 100%;
+   height: 5px;
+   border-radius: 5px;
+   background-color: white;
+   transition: all .2s;
+   transform-origin: left ;
+}
+
+.burger-icon .rotated1 {
+   transform: rotate(42deg);
+}
+
+.burger-icon .noshow {
+   visibility: hidden;
+   opacity: 0;
+}
+
+.burger-icon .rotated3 {
+   /* transform-origin: left ; */
+   transform: rotate(-42deg);
+}
+
+/* .burger-menu {
+   height: 100vh;
+   width: 100px;
+   background-color: var(--header-background);
+} */
+
+.nav-bar {
+   /* width: auto; */
+   height: 100px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   /* position: relative; */
+}
+
+
+.nav-bar__options {
+   /* min-width: 100%; */
+   max-width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   /* display: flex; */
+   background-color: var(--header-background);
+   z-index: 1;
+   transition: all .3s;
+   /* transform: translateX(-100%); */
+}
+
+.nav-bar__options-noshow {
+   /* z-index: 2; */
+   /* transition: transform 1s; */
+   transform: translateX(100%);
+   visibility: hidden;
+   opacity: 0;
+   /* order: -1; */
+}
+
+.nav-bar__options .item {
+   /* min-height: 100; */
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin: 15px 10px;
+   font-size: 3.5rem;
+   transition: all .3s ease-in-out;
+}
+
+.nav-bar__options .item:active {
+   background-color: #75d1c3;
+}
+
+.item .nav-link {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color: white;
+}
+
+/* header ends here */
+
+
+
+
+.item__logo {
+   width: 50px;
+   height: 50px;
+}
+
+
+
+
+
+/* burger menu media query starts here */
+
+@media(min-width: 800px) {
+   .burger-icon {
+      display: none;
+   }
+
+   .nav-bar {
+      width: 50%;
+   }
+
+   .nav-bar__options {
+      width: 100%;
+      height: 100%;
+      min-height: unset;
+      /* display: flex; */
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: initial;
+   }
+
+   .nav-bar__options .item {
+      width: auto;
+      height: 100%;
+      text-align: center;
+      font-size: 1.8rem;
+      transition: transform .2s;
+   }
+
+   .nav-bar__options .item:hover {
+      transform: translateY(10px);
+   }
+
+   .nav-bar__options-noshow {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+   }
+}
+
+/* burger menu media query ends here */

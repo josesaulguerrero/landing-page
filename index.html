@@ -13,13 +13,19 @@
    <header id="header" class="header">
       <figure class="logo">
          <img src="https://image.flaticon.com/icons/png/512/1596/1596810.png" title="company logo" alt="this is our logo" id="header-img">
+         <span>Let's be happy!</span>
       </figure>
       <nav id="nav-bar" class="nav-bar">
-         <ul class="nav-bar__options">
+         <div class="burger-icon" id="burger-menu">
+            <div class="line1" id="firstLine"></div>
+            <div class="line2" id="secondLine"></div>
+            <div class="line3" id="thirdLine"></div>
+         </div>
+         <ul class="nav-bar__options nav-bar__options-noshow" id="nav-bar__options">
             <li class="item"><a class="nav-link" href="#features">Features</a></li>
             <li class="item"><a class="nav-link" href="#what-we-do">What we do</a></li>
             <li class="item"><a class="nav-link" href="#go-premium">Go premium</a></li>
-            <li class="item"><a class="nav-link" href="#contactUs">Contact us</a></li>
+            <li class="item"><a class="nav-link" href="#contactUs">Contact us</a></li> 
          </ul>
       </nav>
    </header>
@@ -34,10 +40,10 @@
          </ul>
       </section>
 
-      <section class="what-we-do" id="what-we-do">
+      <!-- <section class="what-we-do" id="what-we-do">
          <p class="what-we-do__text">We pick animals from the street, then we bring them to our facilities, where they are treated with all our love, but we are not enough to love them all, that is why you should adopt a new pet, they all are cute and eager to meet you. We want to help everyone get a new friend, someone who will never leave you or betray you ;) if you are not sure yet, you should watch this video about why having a pet is great and healthy for you. Let's make the world better one pet at the time!</p>
          <video src="assets/y2mate.com - 7 Ways Having a Pet Can Improve Your Mental health_480p (1).mp4" id="video" controls></video>
-      </section>
+      </section> -->
 
       <section class="go-premium" id="go-premium">
          <article class="card__basic">
@@ -94,6 +100,6 @@
 
    </main>
 
-
+   <script src="index.js"></script>
 </body>
 </html>
